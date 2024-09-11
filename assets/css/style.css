@@ -1,0 +1,294 @@
+:root {
+    --cor-retangulo-base: rgb(46, 53, 106);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+
+    height: 100%;
+
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.retangulo-base {
+    width: 1000px;
+    height: 500px;
+    background-color: var(--cor-retangulo-base);
+    position: relative;
+}
+
+.carro-carcaca {
+    width: 920px;
+    height: 300px;
+    background-color: rgba(166, 21, 96);
+    z-index: 1;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 40px 0px 40px 40px;
+    /* border: 3px solid black; */
+}
+
+.janelas {
+    width: 600px;
+    height: 120px;
+    background-color: rgb(197, 238, 240);
+    z-index: 2;
+    position: absolute;
+    top: 48px;
+    right: 40px;
+    border-radius: 120px 20px 0px 0px;
+    border: 15px solid rgba(166, 21, 96);
+}
+
+.janelas-divisas-1{
+    width: 25px;
+    height: 105px;
+    background-color: rgba(166, 21, 96);
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    right: 400px;
+}
+
+.janelas-divisas-2{
+    width: 25px;
+    height: 105px;
+    background-color: rgba(166, 21, 96);
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    right: 180px;
+}
+
+.roda-1{
+    width: 225px;
+    height: 225px;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    position: absolute;
+    bottom: 5px;
+    left: 105px;
+    border-radius: 50%;
+}
+
+.roda-1::after{
+    content: " ";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(246, 246, 246);
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.roda-1::before{
+    content: "";
+    width: 85px;
+    height: 85px;
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.roda-1-efeito-fundo {
+
+    width: 225px;
+    height: 40px;
+    background-color: rgb(246, 246, 246);
+    z-index: 2;
+    position: absolute;
+    bottom: 35px;
+    left: 105px;
+    border-radius: 30px 30px 0px 0px;
+
+}
+
+.roda-2{
+    width: 225px;
+    height: 225px;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    position: absolute;
+    bottom: 5px;
+    right: 105px;
+    border-radius: 50%;
+}
+
+.roda-2::after{
+    content: " ";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(246, 246, 246);
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.roda-2::before{
+    content: "";
+    width: 85px;
+    height: 85px;
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.roda-2-efeito-fundo {
+    width: 225px;
+    height: 40px;
+    background-color: rgb(246, 246, 2465);
+    z-index: 2;
+    position: absolute;
+    bottom: 35px;
+    right: 105px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.escapamento {
+    width: 65px;
+    height: 40px;
+    background-color: grey;
+    z-index: 2;
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+}
+
+.fumaca {
+    width: 5px;
+    height: 10px;
+    background-color: rgb(75, 75, 75);
+    z-index: 4;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    animation: sair-fumaca 1s ease-in-out infinite;
+}
+
+@keyframes sair-fumaca {
+    0% {
+        right: 20px;
+    }
+
+    50% {
+        right: 10px;
+    }
+
+    100% {
+        right: 10px;
+        background-color: rgb(246, 246, 2465);
+    }
+}
+
+.parachoque {
+
+    width: 65px;
+    height: 60px;
+    background-color: grey;
+    z-index: 2;
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+}
+
+.retrovisor {
+
+    width: 40px;
+    height: 25px;
+    background-color: rgb(90, 11, 52);
+    z-index: 2;
+    position: absolute;
+    top: 145px;
+    left: 365px;
+    border-radius: 10px 10px 10px 5px;
+}
+
+.farol {
+    width: 40px;
+    height: 50px;
+    background-color: rgb(255, 249, 168);
+    z-index: 2;
+    position: absolute;
+    top: 159.5px;
+    left: 39.9px;
+    border-radius: 50px 0px 0px 0px;
+}
+
+.brilho-farol {
+    width: 30px;
+    height: 5px;
+    background-color: rgb(255, 249, 168);
+    z-index: 2;
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    transform: rotate(45deg);
+    animation: brilhar 2s ease-in-out infinite;
+}
+
+.brilho-farol-menor1 {
+    width: 20px;
+    height: 5px;
+    background-color: rgb(255, 249, 168);
+    z-index: 2;
+    position: absolute;
+    top: 145px;
+    left: 30px;
+    transform: rotate(45deg);
+    animation: brilhar 2s ease-in-out infinite;
+}
+
+.brilho-farol-menor2 {
+    width: 20px;
+    height: 5px;
+    background-color: rgb(255, 249, 168, 1);
+    z-index: 2;
+    position: absolute;
+    top: 170px;
+    left: 15px;
+    transform: rotate(45deg);
+    animation: brilhar 2s ease-in-out infinite;
+}
+
+@keyframes brilhar {
+    0% {
+        background-color: rgba(255, 249, 168, 1);
+    }
+
+    50% {
+        background-color: rgba(255, 249, 168, 0.5);
+    }
+
+    100% {
+    
+        background-color: rgba(255, 249, 168, 1);
+    }
+}
